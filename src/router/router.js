@@ -4,7 +4,7 @@ const render = require('../services/render');
 const api = require('../controller/controller');
 
 route.get('/', render.home);
-route.get("/delete1",render.warning);
+route.get('/delete1', render.warning);
 route.get('/update', render.update);
 route.get('/addUser', render.addUser);
 
