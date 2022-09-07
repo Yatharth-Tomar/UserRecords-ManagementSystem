@@ -14,7 +14,7 @@ exports.create = async (req, res) => {
     const save = await details.save();
     return res.redirect('/');
   } catch (e) {
-    res.rdirect('oops cant create the document :(');
+    res.redirect('oops cant create the document :(');
     console.log(e);
   }
 };
@@ -43,14 +43,14 @@ exports.findbyid = async (req, res) => {
 
 exports.update = async (req, res) => {
   try {
-    console.log(req.params.id)
+    console.log(req.params.id);
     const updateD = await Model.findByIdAndUpdate(req.params.id, {
       name: req.body.name,
       email: req.body.email,
       gender: req.body.gender,
       status: req.body.status,
     });
-    return res.redirect("/");
+    return res.redirect('/');
   } catch (e) {
     res.send('Cannot update :(');
     console.log(e);
@@ -59,7 +59,6 @@ exports.update = async (req, res) => {
 
 exports.delete = async (req, res) => {
   try {
-   
     const del = await Model.findByIdAndDelete(req.query.id);
     res.send('document deleted successfully :(');
   } catch (e) {
