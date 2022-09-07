@@ -1,0 +1,22 @@
+{
+  "name": "records",
+  "version": "1.0.0",
+  "description": "This is a full stack website having both frontend and backend. we are using express to create servers and mongodb to store the data of all the employers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yatharth Tomar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.9.0",
+    "mongoose": "^6.5.4",
+    "nodemon": "^2.0.19"
+  }
+}

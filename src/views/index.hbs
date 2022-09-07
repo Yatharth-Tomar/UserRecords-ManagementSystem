@@ -1,0 +1,87 @@
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap'
+      rel='stylesheet'
+    />
+    <script
+      src='https://kit.fontawesome.com/a5b80fbed0.js'
+      crossorigin='anonymous'
+    ></script>
+
+  </head>
+  <body>
+   {{>header}}
+
+   
+
+    <main id='site-main'>
+      <div class='container'>
+        <div class='box-nav d-flex justify-between'>
+          <a href='/addUser' class='border-shadow'>
+            <span class='text-gradient'>Add User
+              <i class='fa-solid fa-user'></i></span></a>
+          <script type='text/javascript'>
+
+          </script>
+
+        </div>
+        <!--form handling-->
+        <form class='' action='' method='post'>
+          <table>
+            <thead>
+             
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>@Email</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+          
+
+            </thead>
+            <tbody>
+               {{#data}}
+               
+
+              <tr>
+                <td>{{inc @index}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.gender}}</td>
+                <td>{{this.status}}</td>
+                <td>
+                  <a href='/update?id={{this._id}}' class='btn border-shadow update'>
+                    <span class='text-gradient'><i
+                        class='fa-solid fa-pencil'
+                      ></i></span>
+                  </a>
+
+                  <a class='btn border-shadow delete' href="/delete1?id={{this._id}}">
+                    <span class='text-gradient'><i
+                        class='fas fa-times'
+                      ></i></span>
+                  </a>
+
+                </td>
+              </tr>
+                 {{/data}}
+            </tbody>
+
+            <!-- <%}%> -->
+          </table>
+        </form>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>
