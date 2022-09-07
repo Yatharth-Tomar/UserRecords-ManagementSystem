@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
-const router = require('./router/router');
-const database = require('./database/connection');
-const Model = require('./models/schema');
+const router = require('./src/router/router');
+const database = require('./src/database/connection');
+const Model = require('./src/models/schema');
 const exphbs = require('express-handlebars');
 
 // parse application/x-www-form-urlencoded
@@ -18,13 +18,13 @@ const hbs = require('hbs');
 
 // setting up the view engine
 app.set('view engine', 'hbs');
-app.set('views', './views');
+app.set('views', './src/views');
 
 //setting up static folders
-app.use(express.static('../public'));
+app.use(express.static('./public'));
 
 //registering hbs partials
-hbs.registerPartials('./views/Partials');
+hbs.registerPartials('./src/views/Partials');
 
 //register handlebars helper
 hbs.registerHelper('inc', function (value) {
