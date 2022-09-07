@@ -1,6 +1,7 @@
 const express = require('express');
+const env = require('dotenv');
 const app = express();
-const PORT = process.env.PORT || 80;
+
 const bodyParser = require('body-parser');
 const router = require('./src/router/router');
 const database = require('./src/database/connection');
@@ -34,7 +35,6 @@ hbs.registerHelper('inc', function (value) {
 //calling the connection to database function
 database();
 
-app.listen(PORT, () => {
-  console.log(`Server currently running on port ${PORT}`);
+app.listen(process.env.PORT || 80, () => {
+  console.log(`Server currently running on port ${process.env.PORT || 80}`);
 });
-module.exports = PORT;
