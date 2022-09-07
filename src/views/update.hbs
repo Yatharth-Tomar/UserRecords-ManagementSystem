@@ -1,6 +1,11 @@
 <html lang='en' dir='ltr'>
   <head>
     <meta charset='utf-8' />
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    />
+
     <title></title>
     <link rel='stylesheet' href='/css/style.css' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -31,9 +36,14 @@
           <span class='text-light'>Use the below form to Update your account</span>
 
         </div>
-       
+
         <!--form handling-->
-        <form class='' id='update_user' action="/upddate/{{data._id}}" method='post'>
+        <form
+          class=''
+          id='update_user'
+          action='/upddate/{{data._id}}'
+          method='post'
+        >
           <div class='new_user'>
             <div class='form-group'>
               <label for='name' class='text-light'>Name</label>
