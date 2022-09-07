@@ -4,8 +4,8 @@
   "description": "This is a full stack website having both frontend and backend. we are using express to create servers and mongodb to store the data of all the employers.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yatharth Tomar",
   "license": "ISC",
