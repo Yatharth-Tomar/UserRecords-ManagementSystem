@@ -21,5 +21,5 @@ const Schema1 = new SchemaForEmployers({
     required: true,
   },
 });
-const Model1 = mongoose.model('Model1', Schema1);
+const Model1 = mongoose.model('Model1', Schema1);//model must be in small letter only
 module.exports = Model1;

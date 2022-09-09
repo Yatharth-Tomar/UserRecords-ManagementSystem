@@ -1,4 +1,5 @@
 const axios = require('axios');
+const alert = require('alert');
 
 exports.warning = async (req, res) => {
   try {
@@ -9,6 +10,7 @@ exports.warning = async (req, res) => {
         params: { id: req.query.id },
       }
     );
+    alert('Account Deleted');
     return res.redirect('/');
   } catch (e) {
     console.log(e);
